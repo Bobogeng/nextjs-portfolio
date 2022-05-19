@@ -209,9 +209,9 @@ export default function Home() {
                             </SkillCard>
                             <SkillCard>
                                 <i className="bx bx-globe h-32 flex items-center justify-center text-6xl xl:text-8xl text-yellow-400 pb-5" />
-                                <h3 className="text-2xl font-bold pb-2">Front-end</h3>
+                                <h3 className="text-2xl font-bold pb-2">Networking</h3>
                                 <p>
-                                    Have studied <span className="font-bold">html</span>, <span className="font-bold">css</span> and <span className="font-bold">javascript</span>. Have also studied several frameworks and libraries of these programming languages like <span className="font-bold">ReactJS</span>, <span className="font-bold">Tailwind</span>, <span className="font-bold">Bootstrap</span>, etc.
+                                    Have studied with <span className="font-bold">Cisco</span> & <span className="font-bold">Mikrotik</span> and have more than 2 years experience. Not focus on this skill but more on the understanding for personal purpose.
                                 </p>
                             </SkillCard>
                         </div>
