@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Display from "../components/Display";
 import Form from "../components/Form";
 import Hero from "../components/Hero";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import SkillCard from "../components/SkillCard";
 import Image from "next/image";
 import Link from "next/link";
