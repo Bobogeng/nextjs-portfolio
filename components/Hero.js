@@ -94,7 +94,7 @@ export default function Hero(props) {
             });
 
         setMounted(true);
-    }, [mounted]);
+    }, [mounted, timeline]);
 
     const heroLandscape = () => {
         if (!mounted) return null;

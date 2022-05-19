@@ -62,7 +62,7 @@ export default function Navbar() {
                     <div className={`${isMobile ? "pb-4 border-b-2 dark:border-b-slate-800" : ""} flex items-center justify-between lg:border-hidden lg:p-0`}>
                         <div className="flex items-center">
                             <div className="relative rounded-full overflow-hidden w-8 h-8">
-                                <Image width={32} height={32} src="/Bobogeng-icon.png" alt="" layout="fixed" objectFit="cover" objectPosition="center" quality={100} />
+                                <Image width={32} height={32} src="/bobogeng-icon.png" alt="" layout="fixed" objectFit="cover" objectPosition="center" quality={100} />
                             </div>
                             <a className="font-bold pl-3" href="#">
                                 Bobogeng
