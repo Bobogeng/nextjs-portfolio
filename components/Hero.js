@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
+import img from "next/img";
 
 export default function Hero(props) {
     gsap.registerPlugin(ScrollTrigger);
@@ -111,31 +111,31 @@ export default function Hero(props) {
                 <div className="relative w-full h-full">
                     <div className="absolute top-0 -z-1 w-full h-screen mix-blend-soft-light bg-black bg-opacity-50"></div>
                     <div className="absolute top-0 -z-2 w-full h-screen mix-blend-screen" ref={light}>
-                        <Image src="/pixel-art-landscape-night/Moon.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Moon.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-3 w-full h-screen" ref={person}>
-                        <Image src="/pixel-art-landscape-night/Person.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Person.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-4 w-full h-screen" ref={crow}>
-                        <Image src="/pixel-art-landscape-night/Crow.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Crow.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-5 w-full h-screen" ref={cloud4}>
-                        <Image src="/pixel-art-landscape-night/Cloud-4.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-4.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-6 w-full h-screen" ref={cloud3}>
-                        <Image src="/pixel-art-landscape-night/Cloud-3.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-3.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-7 w-full h-screen" ref={cloud2}>
-                        <Image src="/pixel-art-landscape-night/Cloud-2.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-2.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-8 w-full h-screen" ref={cloud1}>
-                        <Image src="/pixel-art-landscape-night/Cloud-1.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-1.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-9 w-full h-screen" ref={cloudLandscape}>
-                        <Image src="/pixel-art-landscape-night/Cloud-Landscape.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-Landscape.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-10 w-full h-screen" ref={landscape}>
-                        <Image src="/pixel-art-landscape-night/Landscape.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Landscape.png" alt="" />
                     </div>
                 </div>
             );
@@ -144,31 +144,31 @@ export default function Hero(props) {
                 <div className="relative h-full">
                     <div className="absolute top-0 -z-1 w-full h-screen object-cover mix-blend-soft-light bg-[#898627] bg-opacity-50"></div>
                     <div className="absolute top-0 -z-2 w-full h-screen mix-blend-screen" ref={light}>
-                        <Image src="/pixel-art-landscape/Sun.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape/Sun.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-3 w-full h-screen" ref={person}>
-                        <Image src="/pixel-art-landscape/Person.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape/Person.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-4 w-full h-screen" ref={crow}>
-                        <Image src="/pixel-art-landscape/Crow.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape/Crow.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-5 w-full h-screen" ref={cloud4}>
-                        <Image src="/pixel-art-landscape/Cloud-4.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-4.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-6 w-full h-screen" ref={cloud3}>
-                        <Image src="/pixel-art-landscape/Cloud-3.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-3.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-7 w-full h-screen" ref={cloud2}>
-                        <Image src="/pixel-art-landscape/Cloud-2.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-2.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-8 w-full h-screen" ref={cloud1}>
-                        <Image src="/pixel-art-landscape/Cloud-1.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-1.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-9 w-full h-screen" ref={cloudLandscape}>
-                        <Image src="/pixel-art-landscape/Cloud-Landscape.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-Landscape.png" alt="" />
                     </div>
                     <div className="absolute top-0 -z-10 w-full h-screen" ref={landscape}>
-                        <Image src="/pixel-art-landscape/Landscape.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={70} />
+                        <img className="object-cover bg-center" src="/pixel-art-landscape/Landscape.png" alt="" />
                     </div>
                 </div>
             );
