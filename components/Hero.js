@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import img from "next/img";
+import Image from "next/image";
 
 export default function Hero(props) {
     gsap.registerPlugin(ScrollTrigger);
@@ -15,90 +15,83 @@ export default function Hero(props) {
     let crow = useRef(null);
     let person = useRef(null);
     let light = useRef(null);
+    let timeline = gsap.timeline();
 
     const { systemTheme, theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        gsap.to(landscape.current, {
-            scrollTrigger: {
-                scrub: 1,
-                start: "top center",
-            },
-            scale: 1.1,
-        });
-        gsap.to(cloudLandscape.current, {
-            scrollTrigger: {
-                scrub: 1,
-                start: "top center",
-            },
-            scale: 1.1,
-            yPercent: -1,
-            xPercent: 0,
-        });
-        gsap.to(person.current, {
-            scrollTrigger: {
-                scrub: 1,
-                start: "top center",
-            },
-            scale: 1.3,
-        });
-        gsap.to(crow.current, {
-            scrollTrigger: {
-                scrub: 1,
-                start: "top center",
-            },
-            scale: 0.5,
-            yPercent: 5,
-            xPercent: 10,
-        });
-        gsap.to(cloud1.current, {
-            scrollTrigger: {
-                scrub: 1,
-                start: "top center",
-            },
-            scale: 2,
-            yPercent: -10,
-            xPercent: 5,
-        });
-        gsap.to(cloud2.current, {
-            scrollTrigger: {
-                scrub: 1,
-                start: "top center",
-            },
-            scale: 2,
-            yPercent: -10,
-            xPercent: 5,
-        });
-        gsap.to(cloud3.current, {
-            scrollTrigger: {
-                scrub: 1,
-                start: "top center",
-            },
-            scale: 2,
-            yPercent: -10,
-            xPercent: 5,
-        });
-        gsap.to(cloud4.current, {
-            scrollTrigger: {
-                scrub: 1,
-                start: "top center",
-            },
-            scale: 2,
-            yPercent: -10,
-            xPercent: 5,
-        });
-        gsap.to(light.current, {
-            scrollTrigger: {
-                trigger: light.current,
-                scrub: 1,
-                start: "top center",
-            },
-            scale: 1.2,
-            yPercent: 0,
-            xPercent: 0,
-            transformOrigin: "top right",
-        });
+        timeline
+            .to(landscape.current, {
+                scrollTrigger: {
+                    scrub: 1,
+                },
+                scale: 1.1,
+            })
+            .to(cloudLandscape.current, {
+                scrollTrigger: {
+                    scrub: 1,
+                },
+                scale: 1.1,
+                yPercent: -1,
+                xPercent: 0,
+            })
+            .to(person.current, {
+                scrollTrigger: {
+                    scrub: 1,
+                },
+                scale: 1.3,
+            })
+            .to(crow.current, {
+                scrollTrigger: {
+                    scrub: 1,
+                },
+                scale: 0.5,
+                yPercent: 5,
+                xPercent: 10,
+            })
+            .to(cloud1.current, {
+                scrollTrigger: {
+                    scrub: 1,
+                },
+                scale: 2,
+                yPercent: -10,
+                xPercent: 5,
+            })
+            .to(cloud2.current, {
+                scrollTrigger: {
+                    scrub: 1,
+                },
+                scale: 2,
+                yPercent: -10,
+                xPercent: 5,
+            })
+            .to(cloud3.current, {
+                scrollTrigger: {
+                    scrub: 1,
+                },
+                scale: 2,
+                yPercent: -10,
+                xPercent: 5,
+            })
+            .to(cloud4.current, {
+                scrollTrigger: {
+                    scrub: 1,
+                },
+                scale: 2,
+                yPercent: -10,
+                xPercent: 5,
+            })
+            .to(light.current, {
+                scrollTrigger: {
+                    trigger: light.current,
+                    scrub: 1,
+                },
+                scale: 1.2,
+                yPercent: 0,
+                xPercent: 0,
+                transformOrigin: "top right",
+            });
 
         setMounted(true);
     }, [mounted]);
@@ -111,31 +104,31 @@ export default function Hero(props) {
                 <div className="relative w-full h-full">
                     <div className="absolute top-0 -z-1 w-full h-screen mix-blend-soft-light bg-black bg-opacity-50"></div>
                     <div className="absolute top-0 -z-2 w-full h-screen mix-blend-screen" ref={light}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Moon.png" alt="" />
+                        <Image src="/pixel-art-landscape-night/Moon.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-3 w-full h-screen" ref={person}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Person.png" alt="" />
+                        <Image src="/pixel-art-landscape-night/Person.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-4 w-full h-screen" ref={crow}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Crow.png" alt="" />
+                        <Image src="/pixel-art-landscape-night/Crow.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-5 w-full h-screen" ref={cloud4}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-4.png" alt="" />
+                        <Image src="/pixel-art-landscape-night/Cloud-4.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-6 w-full h-screen" ref={cloud3}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-3.png" alt="" />
+                        <Image src="/pixel-art-landscape-night/Cloud-3.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-7 w-full h-screen" ref={cloud2}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-2.png" alt="" />
+                        <Image src="/pixel-art-landscape-night/Cloud-2.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-8 w-full h-screen" ref={cloud1}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-1.png" alt="" />
+                        <Image src="/pixel-art-landscape-night/Cloud-1.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-9 w-full h-screen" ref={cloudLandscape}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Cloud-Landscape.png" alt="" />
+                        <Image src="/pixel-art-landscape-night/Cloud-Landscape.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-10 w-full h-screen" ref={landscape}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape-night/Landscape.png" alt="" />
+                        <Image src="/pixel-art-landscape-night/Landscape.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                 </div>
             );
@@ -144,31 +137,31 @@ export default function Hero(props) {
                 <div className="relative h-full">
                     <div className="absolute top-0 -z-1 w-full h-screen object-cover mix-blend-soft-light bg-[#898627] bg-opacity-50"></div>
                     <div className="absolute top-0 -z-2 w-full h-screen mix-blend-screen" ref={light}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape/Sun.png" alt="" />
+                        <Image src="/pixel-art-landscape/Sun.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-3 w-full h-screen" ref={person}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape/Person.png" alt="" />
+                        <Image src="/pixel-art-landscape/Person.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-4 w-full h-screen" ref={crow}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape/Crow.png" alt="" />
+                        <Image src="/pixel-art-landscape/Crow.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-5 w-full h-screen" ref={cloud4}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-4.png" alt="" />
+                        <Image src="/pixel-art-landscape/Cloud-4.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-6 w-full h-screen" ref={cloud3}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-3.png" alt="" />
+                        <Image src="/pixel-art-landscape/Cloud-3.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-7 w-full h-screen" ref={cloud2}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-2.png" alt="" />
+                        <Image src="/pixel-art-landscape/Cloud-2.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-8 w-full h-screen" ref={cloud1}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-1.png" alt="" />
+                        <Image src="/pixel-art-landscape/Cloud-1.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-9 w-full h-screen" ref={cloudLandscape}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape/Cloud-Landscape.png" alt="" />
+                        <Image src="/pixel-art-landscape/Cloud-Landscape.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                     <div className="absolute top-0 -z-10 w-full h-screen" ref={landscape}>
-                        <img className="object-cover bg-center" src="/pixel-art-landscape/Landscape.png" alt="" />
+                        <Image src="/pixel-art-landscape/Landscape.png" alt="" layout="fill" objectFit="cover" objectPosition="center" quality={100} />
                     </div>
                 </div>
             );
