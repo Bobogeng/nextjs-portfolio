@@ -132,7 +132,7 @@ export default function Home() {
                                 </p>
                                 <p className="text-sm sm:text-base text-slate-400 text-center xl:text-right">{"//"} Indonesia, based in Depok</p>
                             </div>
-                            <Link href={"cv.pdf"}>
+                            <Link href={"CV.pdf"}>
                                 <a className="w-fit bg-yellow-400 text-white font-bold text-xl py-3 px-5 rounded-md hover:bg-yellow-500 active:bg-yellow-600 transition duration-100 focus:ring ring-yellow-600" target="_blank" rel="noopener noreferrer">
                                     Download CV
                                 </a>
