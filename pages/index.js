@@ -132,7 +132,11 @@ export default function Home() {
                                 </p>
                                 <p className="text-sm sm:text-base text-slate-400 text-center xl:text-right">{"//"} Indonesia, based in Depok</p>
                             </div>
-                            <button className="w-fit bg-yellow-400 text-white font-bold text-xl py-3 px-5 rounded-md hover:bg-yellow-500 active:bg-yellow-600 transition duration-100 focus:ring ring-yellow-600">Download CV</button>
+                            <Link href={"cv.pdf"}>
+                                <a className="w-fit bg-yellow-400 text-white font-bold text-xl py-3 px-5 rounded-md hover:bg-yellow-500 active:bg-yellow-600 transition duration-100 focus:ring ring-yellow-600" target="_blank" rel="noopener noreferrer">
+                                    Download CV
+                                </a>
+                            </Link>
                         </div>
                         <div className="relative order-1 m-auto group">
                             <div className="absolute w-fit h-fit py-5 px-6 rounded-full bg-slate-50 dark:bg-slate-800 -bottom-10 -left-10 z-[2] shadow-lg">
